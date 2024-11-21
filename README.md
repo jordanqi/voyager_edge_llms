@@ -1,6 +1,6 @@
 # Environment Setup and Evaluation Instructions
 
-This README provides step-by-step guidance for setting up the environment, downloading datasets and models, and performing evaluations using the provided methods. All codes are in method folder
+This README provides step-by-step guidance for setting up the environment, downloading datasets and models, and performing evaluations using the provided methods. All codes are in Edge_llm/submission_documents/3_method folder
 
 # 1. Environment Setup
 
