@@ -187,33 +187,6 @@ def prune_wanda_sp(model, tokenizer, nsamples, seqlen, seed, pruning_ratio, devi
 
                     wrapped_layers[name].free()
 
-            # 如果 pruning_ratio_layer < 0，应用特殊的剪枝逻辑
-            elif pruning_ratio_layer < 0:
-                for name in subset:
-                    print(f"pruning layer {i} name {name}")
-                    # 不同块剪枝
-                    if 'mlp' in name:
-                        pruning_ratio_layer = 0.25
-                    else:
-                        pruning_ratio_layer = 0
-
-                    W_metric = torch.abs(subset[name].weight.data) * torch.sqrt(
-                        wrapped_layers[name].scaler_row.reshape((1, -1)))
-
-                    if name == layer_name['m1']:
-                        W_metric = W_metric.mean(axis=0).reshape(-1, 512).sum(dim=1)  # importance score of each head
-                        thresh = torch.sort(W_metric.cuda())[0][
-                            math.ceil(pruning_ratio_layer * layer.self_attn.num_key_value_heads)].cpu()
-                        W_mask = (W_metric >= thresh)
-                        compress(layer, W_mask, None, None, None, device, bias=False)
-                    else:
-                        W_metric = W_metric.mean(axis=0)
-                        thresh = torch.sort(W_metric.cuda())[0][math.ceil(W_metric.numel() * pruning_ratio_layer)].cpu()
-                        W_mask = (W_metric >= thresh)
-                        compress(layer, None, W_mask, None, None, device, bias=False)
-
-                    wrapped_layers[name].free()
-
             for j in range(nsamples):
                 with torch.no_grad():
                     outs[j] = layer(inps[j].unsqueeze(0), attention_mask=attention_mask, position_ids=position_ids)[0]
