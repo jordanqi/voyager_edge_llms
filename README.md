@@ -55,23 +55,8 @@ python Evaluate.py --model_path /path/to/actual/model.bin
 ```
 
 # 6. Methodology
-### 6.1a. Pruning (Oneshot Pruning)
+### 6.1. Pruning (Oneshot Pruning)
 The oneshot_prune method corresponds to the pruning of three models. The pruning rates for Qwen and LLaMA are pre-configured to prune 50% of the parameters. For Phi2, the pruning ratio can be manually adjusted to represent the pruning rate for practical applications.
-
-### 6.1b. LoRA Fine-Tuning
-To perform LoRA fine-tuning, follow these steps:
-
-Navigate to the directory:
-/home/zqin3/loraFineTune/lora/tp_pipeline/external_code/example/tuning/script/tune_gpt2_c4.
-
-Update the tune_llama_c4.yml and tune_qwen_c4.yml files:
-
-Replace the paths for model.bin and the tokenizer with their actual locations.
-Execute the fine-tuning script:
-
-```bash
-CUDA_VISIBLE_DEVICES=0 python main.py --config_path external_code/example/tuning/script/
-```
 
 ### 6.2. Knowledge Distillation
 Teacher Logits Generation
