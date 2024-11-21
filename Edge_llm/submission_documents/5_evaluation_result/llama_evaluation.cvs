@@ -1,0 +1,39 @@
+dataset,version,metric,mode,llama-3-8b-instruct-hf
+openai_humaneval,8e312c,humaneval_pass@1,gen,0.00
+chid-dev,211ee7,accuracy,gen,12.87
+chid-test,211ee7,accuracy,gen,14.04
+truthful_qa,5ddc62,truth,gen,0.74
+bbh-temporal_sequences,e43931,score,gen,2.40
+bbh-disambiguation_qa,d52c61,score,gen,4.00
+bbh-date_understanding,a8000b,score,gen,19.60
+bbh-tracking_shuffled_objects_three_objects,7964c0,score,gen,31.20
+bbh-penguins_in_a_table,fceb27,score,gen,22.60
+bbh-geometric_shapes,503c8f,score,gen,0.00
+bbh-snarks,42d6ca,score,gen,46.07
+bbh-ruin_names,408de8,score,gen,28.00
+bbh-tracking_shuffled_objects_seven_objects,7964c0,score,gen,14.40
+bbh-tracking_shuffled_objects_five_objects,7964c0,score,gen,20.80
+bbh-logical_deduction_three_objects,45ebc5,score,gen,31.20
+bbh-hyperbaton,5e5016,score,gen,48.00
+bbh-logical_deduction_five_objects,45ebc5,score,gen,13.60
+bbh-logical_deduction_seven_objects,45ebc5,score,gen,8.40
+bbh-movie_recommendation,cc2fde,score,gen,14.40
+bbh-salient_translation_error_detection,5b5f35,score,gen,12.00
+bbh-reasoning_about_colored_objects,1cb761,score,gen,5.20
+bbh-multistep_arithmetic_two,30f91e,score,gen,0.00
+bbh-navigate,1576d9,score,gen,18.40
+bbh-dyck_languages,805bea,score,gen,0.00
+bbh-word_sorting,9a3f78,score,gen,0.00
+bbh-sports_understanding,d3fa77,score,gen,46.00
+bbh-boolean_expressions,612c92,score,gen,0.00
+bbh-object_counting,781e5c,score,gen,7.60
+bbh-formal_fallacies,eada96,score,gen,0.00
+bbh-causal_judgement,89eaa4,score,gen,1.60
+bbh-web_of_lies,0c0441,score,gen,1.60
+bbh,-,naive_average,gen,14.71
+commonsense_qa,c946f2,accuracy,gen,19.49
+gsm8k,1d7fe4,accuracy,gen,2.12
+
+Average memory used during inference: 8887.5791015625 MB
+Average inference time: 0.0420 seconds
+Throughput: 23.80 inferences/second
