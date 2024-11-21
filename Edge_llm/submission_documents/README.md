@@ -8,3 +8,5 @@
 - 4_wrapped_opencompass_model: The (wrapped) model definition file (.py) and its configuration file which are required by opencompass for evaluating your local model. 
 
 - 5_evaluation_result: .csv files for evaluation of compressed models.
+
+P.S. All models (checkpoints, weights..) named llama3 were actually llama3.1 instruct required by the competition.
