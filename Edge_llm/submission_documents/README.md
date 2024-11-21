@@ -1,7 +1,7 @@
 
 # Environment Setup and Evaluation Instructions
 
-This README provides step-by-step guidance for setting up the environment, downloading datasets and models, and performing evaluations using the provided methods.
+This README provides step-by-step guidance for setting up the environment, downloading datasets and models, and performing evaluations using the provided methods. All codes are in method folder
 
 # 1. Environment Setup
 
