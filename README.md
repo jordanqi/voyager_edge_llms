@@ -41,6 +41,10 @@ opencompass/opencompass/models
 opencompass/configs
 ```
 Ensure that the actual paths to the model.bin files are correctly updated in the configuration files before running the evaluation.
+```bash
+CUDA_VISIBLE_DEVICES=0 python run.py --datasets commonsenseqa_gen bbh_gen gsm8k_gen humaneval_gen FewCLUE_chid_gen truthfulqa_gen --hf-num-gpus 1 --hf-type base --models custom_model_config --debug --model-kwargs device_map='auto' trust_remote_code=True
+# --models: specify the local model
+```
 
 # 5. Throughput and Memory Evaluation
 To evaluate inference memory and throughput, use the Evaluate.py script in the method folder. Ensure the paths to the model.bin files are updated to the actual paths.
