@@ -54,6 +54,12 @@ python Evaluate.py --model_path /path/to/actual/model.bin
 ### 6.1. Pruning (Oneshot Pruning)
 The oneshot_prune method corresponds to the pruning of three models. The pruning rates for Qwen and LLaMA are pre-configured to prune 50% of the parameters. For Phi2, the pruning ratio can be manually adjusted to represent the pruning rate for practical applications.
 
+```bash
+# rune oneshot_prune to prune the model
+python oneshot_prune_llama.py --base_model meta-llama/Meta-Llama-3.1-8B-Instruct --prune_metric wanda_sp --seq_len 256 --output_path your_output_path
+```
+
+
 ### 6.2. Knowledge Distillation
 Teacher Logits Generation
 Use knowledge_distillation_teacher.py to generate the logits of the teacher model via forward passes.
