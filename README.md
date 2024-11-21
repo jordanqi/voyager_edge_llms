@@ -2,6 +2,9 @@
 
 This README provides step-by-step guidance for setting up the environment, downloading datasets and models, and performing evaluations using the provided methods. All codes are in Edge_llm/submission_documents/3_method folder
 
+# 0. Submission folder location
+The Submission folder is under Edge_llm/submission_documents
+
 # 1. Environment Setup
 
 Follow the commands below to create the environment and install the necessary dependencies:
